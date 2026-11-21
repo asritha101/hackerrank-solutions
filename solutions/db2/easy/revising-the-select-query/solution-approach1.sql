@@ -6,13 +6,7 @@
 -- Platform    HackerRank
 -- Language    db2
 -- Status      Accepted
--- Submitted   2026-11-21, 08:11 p.m.
--- Technique   select-where-clause-filtering
--- Time        O(N)
--- Space       O(1)
--- Insight     The query retrieves all columns from the CITY table by applying a conjunctive filter on the CountryCode and Population attributes.
--- Interview   Before: "I would iterate through the table and check each row manually." After: "Using a SQL WHERE clause allows the database engine to perform an O(N) scan to filter rows where CountryCode is 'USA' and Population exceeds 100,000 efficiently."
--- Pitfalls    (1) Failing to use the exact string literal 'USA' for the CountryCode comparison.  (2) Using an incorrect comparison operator like >= instead of the strictly greater than > operator required for the population threshold.
+-- Submitted   2026-11-21, 08:13 p.m.
 -- ──────────────────────────────────────────────────
 
 
