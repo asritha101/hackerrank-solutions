@@ -7,6 +7,12 @@
 -- Language    db2
 -- Status      Accepted
 -- Submitted   2026-11-21, 08:41 p.m.
+-- Technique   basic-select-projection
+-- Time        O(N)
+-- Space       O(N)
+-- Insight     The query performs a full table scan to retrieve all rows from the STATION table, projecting only the CITY and STATE columns.
+-- Interview   Before: "I need to filter the data based on specific criteria." After: "Since the problem asks for all entries, a simple SELECT statement with O(N) time complexity is sufficient to retrieve the required columns from the STATION table."
+-- Pitfalls    (1) Selecting columns not present in the STATION table schema.  (2) Failing to include both CITY and STATE columns as explicitly required by the problem statement.
 -- ──────────────────────────────────────────────────
 
 
