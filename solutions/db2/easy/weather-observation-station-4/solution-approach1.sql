@@ -7,6 +7,12 @@
 -- Language    db2
 -- Status      Accepted
 -- Submitted   2026-11-21, 08:48 p.m.
+-- Technique   aggregate-difference-query
+-- Time        O(N)
+-- Space       O(1)
+-- Insight     The query calculates the difference between the total count of city entries and the count of unique city entries by subtracting the result of two aggregate functions.
+-- Interview   Before: "How would you find the count of duplicate city names?" After: "I would subtract the count of distinct cities from the total count of cities, which runs in O(N) time complexity as it requires scanning the table to aggregate the values."
+-- Pitfalls    (1) Failing to use the DISTINCT keyword results in a difference of zero rather than the count of duplicate entries.  (2) Assuming the query requires a GROUP BY clause when aggregate functions alone suffice for the entire table.
 -- ──────────────────────────────────────────────────
 
 
